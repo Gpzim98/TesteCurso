@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Install Azure Functions Core Tools
-              run: npm i -g azure-functions-core-tools@3 --unsafe-perm true
+        run: npm i -g azure-functions-core-tools@3 --unsafe-perm true
 
   build:
     runs-on: ubuntu-latest
