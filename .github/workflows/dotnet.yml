@@ -16,6 +16,12 @@ env:
   ROOT_SOLUTION_PATH: backend/Checkout # set this to the root path of your solution/project file
   DOTNET_VERSION: '7.0.x'
 jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install Azure Functions Core Tools
+              run: npm i -g azure-functions-core-tools@3 --unsafe-perm true
+
   build:
     runs-on: ubuntu-latest
     
@@ -63,9 +69,6 @@ jobs:
             
       - name: Build Function App for Release
         run: dotnet build ${{ env.AZURE_FUNCTION_PROJ_PATH }} --configuration Release
-      
-      - name: Install Azure Functions Core Tools
-        run: npm i -g azure-functions-core-tools@3 --unsafe-perm true
       
       - name: Publish Azure Function App
         run: func azure functionapp publish ${{ env.AZURE_FUNCTIONAPP_NAME }} --csharp
