@@ -16,10 +16,6 @@ env:
   ROOT_SOLUTION_PATH: backend/Checkout # set this to the root path of your solution/project file
   DOTNET_VERSION: '7.0.x'
 jobs:
-  install:
-    runs-on: ubuntu-latest
-    steps:
-      
   build:
     runs-on: ubuntu-latest
     
