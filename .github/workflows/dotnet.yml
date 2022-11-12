@@ -68,5 +68,5 @@ jobs:
         run: npm i -g azure-functions-core-tools@3 --unsafe-perm true
       
       - name: Publish Azure Function App
-        run: func azure functionapp publish ${{ env.AZURE_FUNCTIONAPP_NAME }} --csharp --force
+        run: func azure functionapp publish ${{ env.AZURE_FUNCTIONAPP_NAME }} --force
         working-directory: ${{ env.AZURE_FUNCTION_PROJ_PATH }}
