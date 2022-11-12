@@ -6,3 +6,4 @@ APPNAME="functionappcourse"
 
 cd ../../backend/Checkout/
 func azure functionapp publish $APPNAME
+
