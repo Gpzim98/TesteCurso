@@ -33,7 +33,7 @@ jobs:
         working-directory: ${{ env.AZURE_FUNCTION_PROJ_PATH }}
         
       - name: Rename build.settings.json to local.settings.json
-        run: mv build.settings.json local.settings.json
+        run: touch local.settings.json
         working-directory: ${{ env.AZURE_FUNCTION_PROJ_PATH }}
       
       - name: List project files after build.settings.json rename
