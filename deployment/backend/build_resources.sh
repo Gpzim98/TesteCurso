@@ -2,7 +2,6 @@
 # exit when any command fails
 set -e
 
-az ad sp create-for-rbac --name "functionappcourse-sp" --sdk-auth --role contributor --scopes /subscriptions/d1b33a9b-d622-42a8-a58a-2f33f42da18e/resourcegroups/backend/providers/Microsoft.Web/sites/functionappcourse
 
 
 TENANT="d6899ed6-5580-44f1-a812-b557fe2f882c"
