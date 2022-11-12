@@ -70,6 +70,10 @@ jobs:
       - name: Build Function App for Release
         run: dotnet build ${{ env.AZURE_FUNCTION_PROJ_PATH }} --configuration Release
       
+  publish:
+    needs: install
+    runs-on: ubuntu-latest
+    steps:     
       - name: Publish Azure Function App
         run: func azure functionapp publish ${{ env.AZURE_FUNCTIONAPP_NAME }} --csharp
         working-directory: ${{ env.AZURE_FUNCTION_PROJ_PATH }}
