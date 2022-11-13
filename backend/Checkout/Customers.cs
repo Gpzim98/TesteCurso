@@ -22,7 +22,7 @@ namespace MyCompany.Function
             var response = req.CreateResponse(HttpStatusCode.OK);
             response.Headers.Add("Content-Type", "text/plain; charset=utf-8");
 
-            response.WriteString("Welcome to Azure Functions!blas12");
+            response.WriteString("Welcome to Azure Functions!blas123");
 
             return response;
         }
